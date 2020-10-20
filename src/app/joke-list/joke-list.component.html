@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+    <div class="card card-block" *ngFor="let joke of jokes">
+       <h4 class="card-title">{{ joke.setup }}</h4> 
+       <p class="card-text" [hidden]="joke.hidden">{{ joke.punchline }}</p>
+       <button class="btn btn-primary"
+       (click)="joke.toggle()">Tell me</button>
+    </div>
+
+</body>
+
+</html>
